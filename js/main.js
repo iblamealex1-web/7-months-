@@ -61,3 +61,90 @@ if (flowerBox) {
     setTimeout(() => f.remove(), 10000);
   }, 400);
 }
+/* ===== QUIZ LOGIC (PAGE 2) ===== */
+
+const questions = [
+  {
+    q: "When did I propose to you?",
+    a: [
+      "That unexpected moment",
+      "On a random normal day",
+      "A moment we’ll never forget",
+      "You remember better than me"
+    ]
+  },
+  {
+    q: "What incident made us close?",
+    a: [
+      "Late night talks",
+      "That one misunderstanding",
+      "Being there for each other",
+      "It just happened naturally"
+    ]
+  },
+  {
+    q: "What do you love about us?",
+    a: [
+      "How we fight but stay",
+      "How we understand each other",
+      "The comfort we share",
+      "All of it"
+    ]
+  },
+  {
+    q: "One thing you miss?",
+    a: [
+      "Your voice",
+      "Your presence",
+      "Our moments",
+      "Everything"
+    ]
+  },
+  {
+    q: "How do you want our future?",
+    a: [
+      "Peaceful and loving",
+      "Growing together",
+      "Strong no matter what",
+      "Always us"
+    ]
+  },
+  {
+    q: "Where do you see us in 3 years?",
+    a: [
+      "Still choosing each other",
+      "More mature",
+      "Stronger together",
+      "Side by side"
+    ]
+  }
+];
+
+let current = 0;
+
+const questionEl = document.getElementById("question");
+const answersEl = document.querySelector(".answers");
+const nextBtn = document.querySelector(".next-btn");
+
+if (questionEl && answersEl && nextBtn) {
+  nextBtn.addEventListener("click", () => {
+    current++;
+
+    if (current >= questions.length) {
+      // GO TO NEXT PAGE
+      window.location.href = "ship.html";
+      return;
+    }
+
+    // Update question
+    questionEl.textContent = questions[current].q;
+
+    // Update answers
+    answersEl.innerHTML = "";
+    questions[current].a.forEach(ans => {
+      const btn = document.createElement("button");
+      btn.textContent = ans;
+      answersEl.appendChild(btn);
+    });
+  });
+}
