@@ -258,6 +258,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(180deg, #5a0f1b, #8b1d2c);
   overflow-x: hidden;
+overflow-y: auto;
   padding-top: 180px;
   font-family: Georgia, serif;
 }
