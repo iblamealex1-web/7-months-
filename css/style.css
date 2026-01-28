@@ -528,3 +528,6 @@ body {
     opacity: 0;
   }
 }
+body {
+  overflow-y: auto;
+}
