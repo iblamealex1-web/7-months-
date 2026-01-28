@@ -254,3 +254,116 @@ body {
   0%, 100% { transform: rotate(-2deg); }
   50% { transform: rotate(2deg); }
 }
+.page2 {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #5a0f1b, #8b1d2c);
+  overflow-x: hidden;
+  padding-top: 180px;
+  font-family: Georgia, serif;
+}
+.hanging-photos {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.photo {
+  position: relative;
+  animation: swing 4s ease-in-out infinite;
+}
+
+.photo img {
+  width: 120px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.string {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  width: 2px;
+  height: 120px;
+  background: #3b0a12;
+  transform: translateX(-50%);
+}
+
+@keyframes swing {
+  0%,100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+.quiz-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 22px;
+  padding: 50px 40px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+}
+
+.quiz-card h1 {
+  margin-bottom: 25px;
+}
+
+.quiz-card p {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.answers button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.85);
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.answers button:hover {
+  background: #ffb3c1;
+}
+.next-btn {
+  padding: 12px 30px;
+  background: #ff4d6d;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.flowers {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.flower {
+  position: absolute;
+  top: -20px;
+  width: 12px;
+  height: 12px;
+  background: #ffb3c1;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
