@@ -148,3 +148,9 @@ if (questionEl && answersEl && nextBtn) {
     });
   });
 }
+const music = document.getElementById("bgMusic");
+if (music) {
+  document.addEventListener("click", () => {
+    music.play();
+  }, { once: true });
+}
