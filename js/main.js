@@ -147,6 +147,19 @@ if (questionEl && answersEl && nextBtn) {
       answersEl.appendChild(btn);
     });
   });
+  function renderQuestion() {
+  questionEl.textContent = questions[current].q;
+  answersEl.innerHTML = "";
+
+  questions[current].a.forEach(text => {
+    const btn = document.createElement("button");
+    btn.textContent = text;
+    answersEl.appendChild(btn);
+  });
+}
+
+// 👇 THIS LINE IS CRITICAL
+renderQuestion();
 }
 const music = document.getElementById("bgMusic");
 if (music) {
