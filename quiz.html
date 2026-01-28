@@ -7,26 +7,43 @@
 </head>
 <body class="page2">
 
-<h1>How We Fell In Love</h1>
+  <!-- Falling flowers -->
+  <div class="flowers"></div>
 
-<div class="tree">
-  <img src="assets/pic1.jpg">
-  <img src="assets/pic2.jpg">
-  <img src="assets/pic3.jpg">
-</div>
+  <!-- Hanging photos -->
+  <div class="hanging-photos">
+    <div class="photo">
+      <span class="string"></span>
+      <img src="assets/her.jpg">
+    </div>
+    <div class="photo">
+      <span class="string"></span>
+      <img src="assets/pic1.jpg">
+    </div>
+    <div class="photo">
+      <span class="string"></span>
+      <img src="assets/pic2.jpg">
+    </div>
+  </div>
 
-<div class="quiz">
-  <input data-q="0" placeholder="When did I propose to you?">
-  <input data-q="1" placeholder="What incident made us close?">
-  <input data-q="2" placeholder="What do you love about us?">
-  <input data-q="3" placeholder="One thing you miss">
-  <input data-q="4" placeholder="How do you want our future?">
-  <input data-q="5" placeholder="Something you want to tell me">
-  <input data-q="6" placeholder="Where do you see us in 3 years?">
-</div>
+  <!-- Quiz card -->
+  <div class="quiz-card">
+    <h1>How We Fell In Love</h1>
 
-<a href="ship.html" class="btn">Next →</a>
+    <p id="question">
+      When did I propose to you?
+    </p>
 
-<script src="js/main.js"></script>
+    <div class="answers">
+      <button>That unexpected moment</button>
+      <button>On a random normal day</button>
+      <button>A moment we’ll never forget</button>
+      <button>You remember better than me</button>
+    </div>
+
+    <button class="next-btn">Next →</button>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
