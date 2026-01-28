@@ -154,3 +154,20 @@ if (music) {
     music.play();
   }, { once: true });
 }
+/* PAGE 4 LOVE FALL */
+document.addEventListener("DOMContentLoaded", () => {
+  const box = document.querySelector(".love-fall");
+  if (!box) return;
+
+  setInterval(() => {
+    const item = document.createElement("div");
+    item.className = "love-item";
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.animationDuration = (6 + Math.random() * 4) + "s";
+    box.appendChild(item);
+
+    setTimeout(() => {
+      if (item.parentNode) item.remove();
+    }, 10000);
+  }, 700);
+});
