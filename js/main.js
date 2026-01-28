@@ -48,3 +48,16 @@ if (heartContainer) {
     setTimeout(() => heart.remove(), 9000);
   }, 350);
 }
+const flowerBox = document.querySelector(".flowers");
+
+if (flowerBox) {
+  setInterval(() => {
+    const f = document.createElement("div");
+    f.className = "flower";
+    f.style.left = Math.random() * 100 + "vw";
+    f.style.animationDuration = 6 + Math.random() * 4 + "s";
+    flowerBox.appendChild(f);
+
+    setTimeout(() => f.remove(), 10000);
+  }, 400);
+}
