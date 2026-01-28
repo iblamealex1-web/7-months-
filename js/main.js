@@ -34,3 +34,17 @@ if (items.length) {
   });
   items.forEach(i=>obs.observe(i));
 }
+/* HEARTS FOR LAST PAGE */
+const heartContainer = document.querySelector(".hearts");
+
+if (heartContainer) {
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = 5 + Math.random() * 4 + "s";
+    heartContainer.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 9000);
+  }, 350);
+}
