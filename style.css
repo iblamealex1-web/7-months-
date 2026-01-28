@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  text-align: center;
+  background: linear-gradient(#ffd6e8,#cdb4db);
+}
+
+.container { padding: 40px; }
+
+.hero-img {
+  width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+.letter {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.btn {
+  display: inline-block;
+  margin: 30px;
+  padding: 12px 25px;
+  background: #ff6f91;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+/* HEARTS */
+.hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  width: 14px;
+  height: 14px;
+  background: pink;
+  transform: rotate(45deg);
+  animation: floatUp linear forwards;
+}
+
+.heart::before,.heart::after{
+  content:"";
+  width:14px;height:14px;
+  background:pink;
+  border-radius:50%;
+  position:absolute;
+}
+
+.heart::before{top:-7px}
+.heart::after{left:-7px}
+
+@keyframes floatUp {
+  to { transform: translateY(-110vh) rotate(45deg); opacity:0; }
+}
+
+/* TREE */
+.tree img {
+  width:120px;
+  margin:10px;
+  animation:swing 3s infinite alternate;
+}
+
+@keyframes swing {
+  from{transform:rotate(-3deg)}
+  to{transform:rotate(3deg)}
+}
+
+/* OCEAN */
+.ocean {
+  height:100vh;
+  background:linear-gradient(#89cff0,#004e92);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.ship {
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  animation:sail 12s linear infinite, bob 2s ease-in-out infinite;
+}
+
+@keyframes sail {
+  from{transform:translateX(-100vw)}
+  to{transform:translateX(100vw)}
+}
+
+@keyframes bob {
+  50%{transform:translateY(10px)}
+}
+
+/* TIMELINE */
+.timeline div {
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+  margin:40px;
+  font-size:22px;
+}
+
+.timeline div.show {
+  opacity:1;
+  transform:none;
+}
+
+.poem {
+  margin-top:120px;
+  font-size:24px;
+}
