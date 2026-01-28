@@ -455,3 +455,76 @@ body {
   from { opacity: 0; transform: translate(-50%, 20px); }
   to { opacity: 1; transform: translate(-50%, 0); }
 }
+.page4 {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffd6e8, #ffb3c6);
+  overflow-x: hidden;
+  position: relative;
+  padding: 120px 20px;
+  font-family: Georgia, serif;
+}
+.memory-card {
+  max-width: 750px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(10px);
+  border-radius: 26px;
+  padding: 60px 50px;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+  animation: fadeUp 1.8s ease forwards;
+}
+
+.memory-card h1 {
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+.memory-card p {
+  font-size: 21px;
+  line-height: 2;
+}
+
+.signature {
+  margin-top: 35px;
+  font-size: 18px;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+.love-fall {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.love-item {
+  position: absolute;
+  top: -20px;
+  width: 14px;
+  height: 14px;
+  background: #ff4d6d;
+  transform: rotate(45deg);
+  opacity: 0.8;
+  animation: fallLove linear forwards;
+}
+
+.love-item::before,
+.love-item::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #ff4d6d;
+  border-radius: 50%;
+}
+
+.love-item::before { top: -7px; left: 0; }
+.love-item::after { left: -7px; top: 0; }
+
+@keyframes fallLove {
+  to {
+    transform: translateY(120vh) rotate(45deg);
+    opacity: 0;
+  }
+}
